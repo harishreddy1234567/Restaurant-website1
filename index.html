@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udupi Sri Krishna Naivedya | Authentic South Indian Restaurant</title>
+    <meta name="description"
+        content="Authentic Udupi taste. Fresh every day. Experience hygienic, affordable, and delicious South Indian meals loved by families across Yelahanka.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --navy: #0F172A;
+            --charcoal: #1F2937;
+            --beige: #F5F5F4;
+            --white: #FFFFFF;
+            --saffron: #F59E0B;
+            --saffron-hover: #D97706;
+            --green: #10B981;
+
+            --font-heading: 'DM Serif Display', serif;
+            --font-body: 'Inter', sans-serif;
+
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            --radius-full: 9999px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--charcoal);
+            background-color: var(--beige);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
+            transition: var(--transition);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: var(--saffron);
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            .nav-links a {
+                font-weight: 500;
+                color: var(--charcoal);
+                transition: var(--transition);
+            }
+
+            .nav-links a:hover {
+                color: var(--saffron);
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--saffron);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--saffron-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: var(--saffron);
+            color: var(--white);
+            border: var(--shadow-md);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--saffron-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 100px;
+            padding-bottom: 4rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--beige);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            box-shadow: var(--shadow-lg);
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, var(--beige) 0%, transparent 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 600px;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: #4B5563;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--white);
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            font-weight: 500;
+            font-size: 0.875rem;
+            width: max-content;
+        }
+
+        .badge i {
+            font-size: 1.25rem;
+            color: var(--saffron);
+        }
+
+        .badge .pure-veg {
+            color: var(--green);
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                align-items: flex-start;
+                padding-top: 120px;
+            }
+
+            .hero::before {
+                width: 100%;
+                opacity: 0.15;
+                border-radius: 0;
+                left: 0;
+            }
+
+            .hero::after {
+                width: 100%;
+                background: linear-gradient(to bottom, var(--beige) 0%, transparent 100%);
+                left: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Section Global */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: #4B5563;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #4B5563;
+        }
+
+        .promise-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .promise-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .promise-list i {
+            color: var(--green);
+        }
+
+        /* Menu Highlights */
+        .menu-section {
+            background-color: var(--white);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .menu-category {
+            background: var(--beige);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .menu-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .menu-category-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .menu-category-title i {
+            color: var(--saffron);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .menu-item-name {
+            font-weight: 500;
+        }
+
+        .menu-item-price {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .menu-item-desc {
+            font-size: 0.875rem;
+            color: #6B7280;
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #FEF3C7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: var(--saffron);
+        }
+
+        .feature-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: #6B7280;
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+
+        .testimonials .section-header h2 {
+            color: var(--white);
+        }
+
+        .testimonials .section-header p {
+            color: #9CA3AF;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            margin-top: 1rem;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stars {
+            color: var(--saffron);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #E5E7EB;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--saffron);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        /* Gallery */
+        .gallery-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding-bottom: 2rem;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--saffron) var(--beige);
+        }
+
+        .gallery-item {
+            flex: 0 0 calc(85% - 1rem);
+            scroll-snap-align: center;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        @media (min-width: 768px) {
+            .gallery-item {
+                flex: 0 0 calc(33.333% - 1rem);
+            }
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1.5fr;
+            }
+        }
+
+        .contact-info-card {
+            background: var(--beige);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-item i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            color: var(--saffron);
+            border-radius: 50%;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .footer {
+            background-color: var(--charcoal);
+            color: #D1D5DB;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .footer-links h5 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+            font-family: var(--font-body);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--saffron);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+        }
+
+        /* Sticky Mobile CTA */
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 1rem;
+            box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1);
+            z-index: 1000;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media (max-width: 767px) {
+            .mobile-cta-bar {
+                display: flex;
+            }
+
+            .mobile-cta-bar .btn {
+                flex: 1;
+                font-size: 0.95rem;
+                padding: 0.75rem;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><i class="fa-solid fa-leaf"></i> Naivedya</a>
+            <div class="nav-links">
+                <a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a
+                    href="#contact">Location</a>
+                <a href="tel:09035692292" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://www.zomato.com/bangalore/udupi-sri-krishna-naivedya-yelahanka-bangalore/order"
+                    class="btn btn-secondary"> Order Online</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Authentic Udupi Taste.<br>Fresh Every Day.</h1>
+                <p>Experience hygienic, affordable, and delicious South Indian meals loved by families across Yelahanka.
+                    Quick service, pure vegetarian goodness, and homely flavors in every bite.</p>
+                <div class="hero-cta">
+                    <a href="tel:09035692292" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
+                    <a href="#menu" class="btn btn-secondary"><i class="fa-solid fa-utensils"></i> View Menu</a>
+                </div>
+                <div class="trust-badges">
+                    <span class="badge"><i class="fa-solid fa-star"></i> 4.0 Rated by 84+ Customers</span>
+                    <span class="badge"><i class="fa-solid fa-seedling pure-veg"></i> Pure Vegetarian Kitchen</span>
+                    <span class="badge"><i class="fa-solid fa-bolt"></i> Fast & Quick Service</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section reveal">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="file:///C:/Users/Harish/.gemini/antigravity/brain/ef0d3369-ebc9-42d5-a603-8fb57d09401c/idli_vada_1772464907421.png"
+                        alt="Fresh Idli Vada" class="about-image">
+                </div>
+                <div class="about-content">
+                    <h4
+                        style="color: var(--saffron); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; font-size: 0.875rem;">
+                        About Us</h4>
+                    <h3>Tradition Meets Taste</h3>
+                    <p>At Udupi Sri Krishna Naivedya, we believe great food brings comfort and happiness. Located in the
+                        heart of Yelahanka, our restaurant serves authentic Udupi‑style vegetarian dishes prepared fresh
+                        every day using quality ingredients.</p>
+                    <p>From crispy dosas to soft idlis and wholesome meals, our focus is simple — clean food, honest
+                        pricing, and consistent taste.</p>
+                    <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Our Promise</h4>
+                    <ul class="promise-list">
+                        <li><i class="fa-solid fa-check-circle"></i> Freshly prepared daily</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Hygienic kitchen practices</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Pocket‑friendly pricing</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Quick and friendly service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Menu Highlights -->
+    <section id="menu" class="section menu-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <h4 style="color: var(--saffron); text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1px;">
+                    Our Popular Items</h4>
+                <h2>Menu Highlights</h2>
+                <p>Enjoy our freshly prepared authentic South Indian dishes at unbeatable prices.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h3 class="menu-category-title"><i class="fa-solid fa-medal"></i> Breakfast</h3>
+                    <div class="menu-item">
+                        <div><span class="menu-item-name">Idli</span><span class="menu-item-desc">Soft & Fresh</span>
+                        </div><span class="menu-item-price">₹80</span>
+                    </div>
+                    <div class="menu-item"><span>Medu Vada</span><span>₹35</span></div>
+                    <div class="menu-item"><span>Plain Dosa</span><span>₹50</span></div>
+                    <div class="menu-item">
+                        <div><span class="menu-item-name">Masala Dosa</span><span class="menu-item-desc">Crispy with
+                                aloo palya</span></div><span class="menu-item-price">₹110</span>
+                    </div>
+                    <div class="menu-item"><span>Pongal</span><span>₹60</span></div>
+                </div>
+                <div class="menu-category">
+                    <h3 class="menu-category-title"><i class="fa-solid fa-bowl-rice"></i> Meals</h3>
+                    <div class="menu-item">
+                        <div><span class="menu-item-name">South Indian Meals</span><span class="menu-item-desc">Rice,
+                                Sambar, Rasam, Palya</span></div><span class="menu-item-price">₹120</span>
+                    </div>
+                    <div class="menu-item"><span>Mini Meals</span><span>₹90</span></div>
+                    <div class="menu-item"><span>Veg fried Rice</span><span>₹180</span></div>
+                    <div class="menu-item"><span>Mushroom Fried Rice</span><span>₹200</span></div>
+                    <div class="menu-item"><span>veg Noodles</span><span>₹180</span></div>
+                    <div class="menu-item"><span>Besi Bele Bath</span><span>₹90</span></div>
+
+
+
+
+
+
+
+                </div>
+                <div class="menu-category">
+                    <h3 class="menu-category-title"><i class="fa-solid fa-mug-hot"></i> Beverages</h3>
+                    <div class="menu-item"><span>Filter Coffee</span><span>₹20</span></div>
+                    <div class="menu-item"><span>Tea</span><span>₹15</span></div>
+                    <div class="menu-item"><span>Badam Milk</span><span>₹40</span></div>
+                    <div class="menu-item"><span>Apple Milkshake</span><span>₹150</span></div>
+                    <div class="menu-item"><span>Mango Lassi</span><span>₹120</span></div>
+                    <div class="menu-item"><span>Grapes</span><span>₹90</span></div>
+                    <div class="menu-item"><span>Pineapple Juice</span><span>₹90</span></div>
+
+
+
+
+
+
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;"><a href="#contact" class="btn btn-primary btn-lg">View
+                    Full Menu In-Store</a></div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Loved by Locals for a Reason</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h4>Pure Vegetarian</h4>
+                    <p>Prepared in a clean, dedicated veg kitchen.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                    <h4>Fast Service</h4>
+                    <p>Perfect for quick meal breaks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-wallet"></i></div>
+                    <h4>Budget-Friendly</h4>
+                    <p>Delicious food that doesn’t hurt your pocket.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-broom"></i></div>
+                    <h4>Hygienic</h4>
+                    <p>Strict cleanliness and daily fresh prep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Testimonials</h2>
+                <p>See what our regular patrons have to say about us.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-regular fa-star"></i></div>
+                    <p class="testimonial-text">"Good taste and very affordable. Perfect for daily breakfast."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div><span>Srinivas M.</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i></div>
+                    <p class="testimonial-text">"Quick service and clean place. Masala dosa is very good."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">P</div><span>Priya R.</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-regular fa-star"></i></div>
+                    <p class="testimonial-text">"We have Experienced you're food.it's a very delicious and authentic
+                        teste..We enjoyed it."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">D</div><span>Diveej Desai</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Immersive Gallery</h2>
+                <p>Swipe to explore our mouth-watering dishes</p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="file:///C:/Users/Harish/.gemini/antigravity/brain/ef0d3369-ebc9-42d5-a603-8fb57d09401c/masala_dosa_1772464888438.png"
+                        alt="Masala Dosa" loading="lazy" class="gallery-img">
+                </div>
+                <div class="gallery-item"><img src="file:///C:\Users\Harish\OneDrive\Desktop\Chowdappa\photo1.png"
+                        alt="South Indian Thali" loading="lazy" class="gallery-img">
+                </div>
+                <div class="gallery-item"><img
+                        src="file:///C:/Users/Harish/.gemini/antigravity/brain/ef0d3369-ebc9-42d5-a603-8fb57d09401c/idli_vada_1772464907421.png"
+                        alt="Idli Vada" loading="lazy" class="gallery-img"></div>
+                <div class="gallery-item"><img src="file:///C:\Users\Harish\OneDrive\Desktop\Chowdappa\photo2.png"
+                        alt="Restaurant Ambiance" loading="lazy" class="gallery-img"></div>
+                <div class="gallery-item"><img src="file:///C:\Users\Harish\OneDrive\Desktop\Chowdappa\photo4.png"
+                        alt="Restaurant Ambiance" loading="lazy" class="gallery-img"></div>
+                <div class="gallery-item"><img src="file:///C:\Users\Harish\OneDrive\Desktop\Chowdappa\photo5.png"
+                        alt="Restaurant Ambiance" loading="lazy" class="gallery-img"></div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visit Us Today</h2>
+                <p>Conveniently located in Yelahanka. Stop by for a delicious meal!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <div class="contact-info-item"><i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p style="color: #4B5563;">Ground Floor,Hosa Beedi,Hospital Rd,Chowdashwari Layout
+                                Yelahanka, Bengaluru 560064</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item"><i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:09035692292" style="font-weight: 600; color: var(--navy);">90356 92292</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item"><i class="fa-regular fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p style="color: #4B5563;">Open daily · Closes 11:30 PM</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1.5rem;">
+                        <h4 style="margin-bottom: 1rem;">Services</h4>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <span class="badge"
+                                style="background: var(--white); box-shadow: none; border: 1px solid #E5E7EB;"><i
+                                    class="fa-solid fa-check" style="color: var(--green);"></i> Dine-in</span>
+                            <span class="badge"
+                                style="background: var(--white); box-shadow: none; border: 1px solid #E5E7EB;"><i
+                                    class="fa-solid fa-check" style="color: var(--green);"></i> Delivery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1d3886.130983803254!2d77.5898!3d13.1022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae18f08170c265%3A0xe1bbfef9e36cb00d!2sYelahanka%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo"><i class="fa-solid fa-leaf" style="color: var(--saffron);"></i>
+                        Naivedya</a>
+                    <p style="max-width: 300px; margin-bottom: 1rem;">Authentic South Indian vegetarian food served
+                        fresh daily.</p>
+                    <div><span class="badge"
+                            style="background: rgba(255,255,255,0.1); color: var(--white); border: none;"><i
+                                class="fa-solid fa-star"></i> 4.0 Google Rating</span></div>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a
+                                href="https://www.zomato.com/bangalore/udupi-sri-krishna-naivedya-yelahanka-bangalore/order">Order
+                                Online</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 Udupi Sri Krishna Naivedya.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="mobile-cta-bar">
+        <a href="tel:09035692292" class="btn btn-primary" style="flex: 1;"><i class="fa-solid fa-phone"></i> Call
+            Now</a>
+        <a href="#contact" class="btn btn-secondary" style="flex: 1;"><i class="fa-solid fa-location-arrow"></i>
+            Directions</a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                if (reveals[i].getBoundingClientRect().top < window.innerHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+
+</html>
